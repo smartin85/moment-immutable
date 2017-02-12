@@ -1,7 +1,8 @@
 # moment-immutable
 [![MIT License][license-image]][license-url] 
 [![Build Status][travis-image]][travis-url]
-
+[![Dependency Status][versioneye-image]][versioneye-url]
+[![npm version][npm-image]][npm-url]  
 
 
 Make moment.js immutable (moments and durations)
@@ -72,8 +73,8 @@ moment.immutable.addDurationMutable('set', 0);  // makes the set-function immuta
 [travis-url]: http://travis-ci.org/smartin85/moment-immutable
 [travis-image]: https://travis-ci.org/smartin85/moment-immutable.svg?branch=master
 
-[versioneye-image]: https://www.versioneye.com/user/projects/58a098466a7781004a93fadb/badge.svg
-[versioneye-url]: https://www.versioneye.com/user/projects/58a098466a7781004a93fadb
+[versioneye-image]: https://www.versioneye.com/user/projects/58a0d4ab6a7781003a57a209/badge.svg
+[versioneye-url]: https://www.versioneye.com/user/projects/58a0d4ab6a7781003a57a209
 
 [npm-image]: https://badge.fury.io/js/moment-immutable.svg
 [npm-url]: https://badge.fury.io/js/moment-immutable
