@@ -1,0 +1,39 @@
+{
+  "name": "moment-immutable",
+  "version": "1.0.0",
+  "description": "Make moment.js immutable",
+  "main": "moment-immutable.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/smartin85/moment-immutable.git"
+  },
+  "keywords": [
+    "momentjs",
+    "date",
+    "immutable",
+    "react"
+  ],
+  "author": "Smartin Nematronic",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/smartin85/moment-immutable/issues"
+  },
+  "homepage": "https://github.com/smartin85/moment-immutable#readme",
+  "dependencies": {
+    "moment": ">= 2.8.1 <3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.9.1",
+    "gulp-uglifyjs": "~0.6.2",
+    "jasmine-core": "~2.5.2",
+    "karma": "~1.4.1",
+    "karma-chrome-launcher": "~2.0.0",
+    "karma-global-preprocessor": "~0.0.2",
+    "karma-jasmine": "~1.1.0",
+    "karma-phantomjs-launcher": "~1.0.2",
+    "run-sequence": "~1.2.2"
+  }
+}
