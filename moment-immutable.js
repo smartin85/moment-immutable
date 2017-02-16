@@ -11,12 +11,12 @@
 }(this, function (moment) {
 	'use strict';
 
-    var VERSION = '1.0.0',
+    var VERSION = '1.0.1',
         momentMutablesAndParameters = {
             'add': 0,
             'endOf': 0, 
             'lang': 0, 
-            'locale': 0,
+            'locale': 1,
             'set': 0, 
             'startOf': 0, 
             'subtract': 0,
@@ -68,10 +68,18 @@
 
     function wrapMutable(fn, name, parameters) {
         var original = fn[name];
-        if(original) {
+        if(typeof original === 'function') {
             parameters = parameters || 0;
             fn[name] = function() {
-                return original.apply(arguments.length >= parameters ? this.clone() : this, arguments);
+                var that, result;
+                if(this._mutable || arguments.length < parameters || !this._isAMomentObject){
+                    return original.apply(this, arguments);
+                }
+                that = this.clone();
+                that._mutable = true;
+                result = original.apply(that, arguments);
+                result._mutable = false;
+                return result;
             };
         }        
     }
@@ -102,14 +110,26 @@
         return moment.immutable;
     }
 
+    function getSetMutability(isMutable) {
+        if(isMutable === null) {
+            return this._mutable;
+        } 
+        this._mutable = !!isMutable;
+        return this;
+    }
+
     wrapMutablesByObject(moment.fn, momentMutablesAndParameters);
     wrapMutablesByObject(moment.duration.fn, durationMutablesAndParameters);
+
+    moment.fn.mutable = getSetMutability;
 
     moment.immutable = {
         version: VERSION,
         addMomentMutable: addMomentMutable,
         addDurationMutable: addDurationMutable 
     };
+
+    moment.momentProperties.push('_mutable');
     
     return moment;
 }));

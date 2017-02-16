@@ -1,3 +1,5 @@
+var package = require('./package.json');
+
 module.exports = function (config) {
     config.set({
         basePath: '',
@@ -18,7 +20,7 @@ module.exports = function (config) {
             'karma-global-preprocessor'
         ],
         globals: {
-            packageVersion: require('./package.json').version
+            packageVersion: package.version
         },
         preprocessors: {
             'tests/moment-immutable.spec.js': ['global']

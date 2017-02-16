@@ -36,6 +36,10 @@ define(["moment", "moment-immutable"], function (moment) {
 });
 ```
 
+### Bower
+```
+bower install --save moment-immutable
+```
 
 ## Working without moment-immutable
 
@@ -56,9 +60,9 @@ january1st.format();    // "2017-01-01T00:00:00+01:00" - yeah
 february1st.format();   // "2017-02-01T00:00:00+01:00"
 ```
 
-## Adding mutable-methods of other plugins
+## Converting mutable methods of other plugins to immutable methods
 By default moment-immutable is aware of all the mutable methods of moment.js (moments and durations) and moment-timezone.  
-If you want to make the methods of other plugins immutable, you can do this:
+For converting mutable methods of other plugins to immutable methods you can do this:
 ```js
 // If it is a method on moment-objects:
 moment.immutable.addMomentMutable('period', 1); // makes the period-function immutable if it has at least 1 parameter

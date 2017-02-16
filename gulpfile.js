@@ -1,26 +1,28 @@
-var gulp = require('gulp');
-var KarmaServer = require('karma').Server;
-var uglify = require('gulp-uglifyjs');
-var runSequence = require('run-sequence');
+var gulp = require('gulp'),
+    KarmaServer = require('karma').Server,
+    uglify = require('gulp-uglifyjs'),
+    runSequence = require('run-sequence'),
+    path = require('path');
+
+function runKarma(singleRun, done) {
+    return new KarmaServer({
+        configFile: path.join(__dirname, '/karma.conf.js'),
+        singleRun: singleRun
+    }, done).start();
+}
 
 /**
  * Run test once and exit
  */
 gulp.task('test', function (done) {
-    return new KarmaServer({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun: true
-    }, done).start();
+    return runKarma(true, done);
 });
 
 /**
  * Run test continually
  */
 gulp.task('test:dev', function (done) {
-    return new KarmaServer({
-        configFile: __dirname + '/karma.conf.js',
-        singleRun: false
-    }, done).start();
+    return runKarma(false, done);
 });
 
 /**
