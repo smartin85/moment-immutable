@@ -1,10 +1,18 @@
 {
   "name": "moment-immutable",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Make moment.js immutable",
   "main": "moment-immutable.js",
+  "typings": "./moment-immutable.d.ts",
   "scripts": {
-    "test": "gulp test"
+    "test": "run-s prod:test:*",
+    "start": "run-p dev:*",
+    "dev:test": "karma start",
+    "build": "run-s prod:*",
+    "prod:minify": "uglifyjs --compress --mangle -- moment-immutable.js > moment-immutable.min.js",
+    "prod:test": "run-s prod:test:*",
+    "prod:test:unit": "karma start --singleRun",
+    "prod:test:typings": "tsc --project tests/typings-tests"
   },
   "repository": {
     "type": "git",
@@ -26,14 +34,18 @@
     "moment": ">= 2.8.1 <3.0.0"
   },
   "devDependencies": {
-    "gulp": "~3.9.1",
-    "gulp-uglifyjs": "~0.6.2",
-    "jasmine-core": "~2.5.2",
-    "karma": "1.6.0",
-    "karma-chrome-launcher": "~2.0.0",
-    "karma-global-preprocessor": "~0.0.2",
-    "karma-jasmine": "~1.1.0",
-    "karma-phantomjs-launcher": "~1.0.2",
-    "run-sequence": "~1.2.2"
+    "@types/moment": "2.13.0",
+    "jasmine-core": "2.6.4",
+    "karma": "1.7.0",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-coverage": "1.1.1",
+    "karma-coveralls": "1.1.2",
+    "karma-eslint": "2.2.0",
+    "karma-global-preprocessor": "0.0.2",
+    "karma-jasmine": "1.1.0",
+    "karma-phantomjs-launcher": "1.0.4",
+    "npm-run-all": "4.0.2",
+    "typescript": "2.4.2",
+    "uglify-js": "3.0.26"
   }
 }

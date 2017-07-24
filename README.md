@@ -1,9 +1,11 @@
 # moment-immutable
 [![MIT License][license-image]][license-url] 
+[![npm version][npm-image]][npm-url]
+[![Bower version][bower-image]][bower-url]
 [![Build Status][travis-image]][travis-url]
+[![Coverage Status][coveralls-image]][coveralls-url]
 [![Dependency Status][versioneye-image]][versioneye-url]
-[![npm version][npm-image]][npm-url]  
-
+[![Known Vulnerabilities][snyk-image]][snyk-url]
 
 Make moment.js immutable (moments and durations)
 
@@ -74,11 +76,22 @@ moment.immutable.addDurationMutable('set', 0);  // makes the set-function immuta
 [license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
 
+[npm-image]: https://badge.fury.io/js/moment-immutable.svg
+[npm-url]: https://badge.fury.io/js/moment-immutable
+
+[bower-image]: https://badge.fury.io/bo/moment-immutable.svg
+[bower-url]: https://badge.fury.io/bo/moment-immutable
+
+
+
 [travis-url]: http://travis-ci.org/smartin85/moment-immutable
 [travis-image]: https://travis-ci.org/smartin85/moment-immutable.svg?branch=master
+
+[coveralls-image]: https://coveralls.io/repos/github/smartin85/moment-immutable/badge.svg
+[coveralls-url]: https://coveralls.io/github/smartin85/moment-immutable
 
 [versioneye-image]: https://www.versioneye.com/user/projects/58a0d4ab6a7781003a57a209/badge.svg
 [versioneye-url]: https://www.versioneye.com/user/projects/58a0d4ab6a7781003a57a209
 
-[npm-image]: https://badge.fury.io/js/moment-immutable.svg
-[npm-url]: https://badge.fury.io/js/moment-immutable
+[snyk-image]: https://snyk.io/test/github/smartin85/moment-period/badge.svg
+[snyk-url]: https://snyk.io/test/github/smartin85/moment-period

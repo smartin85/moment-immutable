@@ -1,15 +1,15 @@
-var package = require('./package.json');
-
 module.exports = function (config) {
+    const package = require('./package.json');
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
         files: [
             'node_modules/moment/moment.js',
             'moment-immutable.js',
-            'tests/moment-immutable.spec.js'
+            'tests/unit-tests/moment-immutable.spec.js'
         ],
         exclude: [],
+        reporters: ['progress', 'coverage', 'coveralls'],
         port: 8080,
         logLevel: config.LOG_INFO,
         autoWatch: true,
@@ -17,13 +17,31 @@ module.exports = function (config) {
         plugins: [
             'karma-jasmine',
             'karma-phantomjs-launcher',
-            'karma-global-preprocessor'
+            'karma-global-preprocessor',
+            'karma-coverage',
+            'karma-coveralls',
+            'karma-eslint'
         ],
         globals: {
             packageVersion: package.version
         },
         preprocessors: {
-            'tests/moment-immutable.spec.js': ['global']
+            'tests/unit-tests/moment-immutable.spec.js': ['global', 'eslint'],
+            'moment-immutable.js': ['coverage', 'eslint']
+        },
+        coverageReporter: {
+            reporters: [
+                { type: 'lcov',  dir: 'coverage/'},
+                { type: 'text' }
+            ]
+        },
+        eslint: {
+            stopOnError: false,
+            stopOnWarning: false,
+            showWarnings: true,
+            engine: {
+                configFile: '.eslintrc'
+            }
         },
         singleRun: false
     });
