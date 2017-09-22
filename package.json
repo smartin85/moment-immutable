@@ -1,6 +1,6 @@
 {
   "name": "moment-immutable",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Make moment.js immutable",
   "main": "moment-immutable.js",
   "typings": "./moment-immutable.d.ts",
@@ -35,8 +35,8 @@
   },
   "devDependencies": {
     "@types/moment": "2.13.0",
-    "jasmine-core": "2.6.4",
-    "karma": "1.7.0",
+    "jasmine-core": "2.8.0",
+    "karma": "1.7.1",
     "karma-chrome-launcher": "2.2.0",
     "karma-coverage": "1.1.1",
     "karma-coveralls": "1.1.2",
@@ -44,8 +44,8 @@
     "karma-global-preprocessor": "0.0.2",
     "karma-jasmine": "1.1.0",
     "karma-phantomjs-launcher": "1.0.4",
-    "npm-run-all": "4.0.2",
-    "typescript": "2.4.2",
-    "uglify-js": "3.0.26"
+    "npm-run-all": "4.1.1",
+    "typescript": "2.5.2",
+    "uglify-js": "3.1.1"
   }
 }
