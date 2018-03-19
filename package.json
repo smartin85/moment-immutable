@@ -8,6 +8,7 @@
     "test": "run-s prod:test:*",
     "start": "run-p dev:*",
     "dev:test": "karma start",
+    "update": "ncu -u",
     "build": "run-s prod:*",
     "prod:minify": "uglifyjs --compress --mangle -- moment-immutable.js > moment-immutable.min.js",
     "prod:test": "run-s prod:test:*",
@@ -35,7 +36,7 @@
   },
   "devDependencies": {
     "@types/moment": "2.13.0",
-    "jasmine-core": "2.8.0",
+    "jasmine-core": "3.1.0",
     "karma": "2.0.0",
     "karma-chrome-launcher": "2.2.0",
     "karma-coverage": "1.1.1",
@@ -45,8 +46,8 @@
     "karma-jasmine": "1.1.1",
     "karma-phantomjs-launcher": "1.0.4",
     "npm-run-all": "4.1.2",
-    "moment": "2.20.1",
-    "typescript": "2.6.2",
-    "uglify-js": "3.2.2"
+    "moment": "2.21.0",
+    "typescript": "2.7.2",
+    "uglify-js": "3.3.16"
   }
 }
