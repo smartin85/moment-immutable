@@ -4,7 +4,6 @@
 [![Bower version][bower-image]][bower-url]
 [![Build Status][travis-image]][travis-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
-[![Dependency Status][versioneye-image]][versioneye-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 
 Make moment.js immutable (moments and durations)
