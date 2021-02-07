@@ -2,7 +2,7 @@
 [![MIT License][license-image]][license-url] 
 [![npm version][npm-image]][npm-url]
 [![Bower version][bower-image]][bower-url]
-[![Build Status][travis-image]][travis-url]
+[![Build Status][azure-pipeline-image]][azure-pipeline-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 
@@ -94,3 +94,6 @@ moment.immutable.addDurationMutable('set', 0);  // makes the set-function immuta
 
 [snyk-image]: https://snyk.io/test/github/smartin85/moment-period/badge.svg
 [snyk-url]: https://snyk.io/test/github/smartin85/moment-period
+
+[azure-pipeline-image]: https://dev.azure.com/smartin85/moment-immutable/_apis/build/status/smartin85.moment-immutable?branchName=master
+[azure-pipeline-url]: https://dev.azure.com/smartin85/moment-immutable/_build/latest?definitionId=2&branchName=master
