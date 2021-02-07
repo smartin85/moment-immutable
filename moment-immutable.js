@@ -2,14 +2,14 @@
 
 (function (root, factory) {
 	if (typeof exports === 'object') {
-		module.exports = factory(require('moment'));            // Node
+		module.exports = factory(require('moment')); // Node
 	} else if (typeof define === 'function' && define.amd) {
-		define('moment-immutable', ['moment'], factory);        // AMD
+		define('moment-immutable', ['moment'], factory); // AMD
 	} else {
-		root.moment = factory(root.moment);                     // Browser
+		root.moment = factory(root.moment); // Browser
 	}
 }(this, function (moment) {
-	var VERSION = '1.0.4',
+	var VERSION = '1.0.5',
 		momentMutablesAndParameters = {
 			'add': 0,
 			'endOf': 0,

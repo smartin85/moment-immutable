@@ -13,10 +13,10 @@ module.exports = function (config) {
         port: 8080,
         logLevel: config.LOG_INFO,
         autoWatch: true,
-        browsers: ['PhantomJS'],
+        browsers: ['ChromeHeadless'],
         plugins: [
             'karma-jasmine',
-            'karma-phantomjs-launcher',
+            'karma-chrome-launcher',
             'karma-global-preprocessor',
             'karma-coverage',
             'karma-coveralls',

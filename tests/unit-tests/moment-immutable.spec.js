@@ -21,7 +21,7 @@ describe("moment-immutable", function () {
 
 		expect(testMoment.add(1, 'year')).not.toBe(testMoment);
 		expect(testMoment.endOf('hour')).not.toBe(testMoment);
-		expect(testMoment.lang('de')).not.toBe(testMoment);
+		expect(testMoment.localeData('de')).not.toBe(testMoment);
 		expect(testMoment.locale('de')).not.toBe(testMoment);
 		expect(testMoment.set('year', 2000)).not.toBe(testMoment);
 		expect(testMoment.startOf('year')).not.toBe(testMoment);
@@ -53,10 +53,10 @@ describe("moment-immutable", function () {
 		expect(testMoment.utcOffset(120)).not.toBe(testMoment);
 		expect(testMoment.utc()).not.toBe(testMoment);
 		expect(testMoment.local()).not.toBe(testMoment);
-		expect(testMoment.dates(4)).not.toBe(testMoment);
-		expect(testMoment.months(2)).not.toBe(testMoment);
-		expect(testMoment.years(2010)).not.toBe(testMoment);
-		expect(testMoment.zone(120)).not.toBe(testMoment);
+		expect(testMoment.date(4)).not.toBe(testMoment);
+		expect(testMoment.month(2)).not.toBe(testMoment);
+		expect(testMoment.year(2010)).not.toBe(testMoment);
+		expect(testMoment.utcOffset(120)).not.toBe(testMoment);
 		expect(testMoment.format()).toBe(formated);
 	});
 
