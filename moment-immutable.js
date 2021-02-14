@@ -9,7 +9,7 @@
 		root.moment = factory(root.moment); // Browser
 	}
 }(this, function (moment) {
-	var VERSION = '1.0.6',
+	var VERSION = '1.0.7',
 		momentMutablesAndParameters = {
 			'add': 0,
 			'endOf': 0,
