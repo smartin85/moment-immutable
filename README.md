@@ -5,6 +5,8 @@
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
 
+[![Buy me a coffee][buy-me-a-coffee-image]][buy-me-a-coffee-url]
+
 Make moment.js immutable (moments and durations)
 
 ## Getting Started
@@ -71,7 +73,7 @@ moment.immutable.addMomentMutable('period', 1); // makes the period-function imm
 moment.immutable.addDurationMutable('set', 0);  // makes the set-function immutable
 ```
 
-[license-image]: http://img.shields.io/badge/license-MIT-blue.svg?style=flat
+[license-image]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat
 [license-url]: LICENSE
 
 [npm-image]: https://badge.fury.io/js/moment-immutable.svg
@@ -88,3 +90,6 @@ moment.immutable.addDurationMutable('set', 0);  // makes the set-function immuta
 
 [azure-pipeline-image]: https://dev.azure.com/smartin85/moment-immutable/_apis/build/status/smartin85.moment-immutable?branchName=master
 [azure-pipeline-url]: https://dev.azure.com/smartin85/moment-immutable/_build/latest?definitionId=2&branchName=master
+
+[buy-me-a-coffee-image]: https://www.buymeacoffee.com/assets/img/custom_images/yellow_img.png
+[buy-me-a-coffee-url]: https://www.buymeacoffee.com/smartin
