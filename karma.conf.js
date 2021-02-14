@@ -1,11 +1,13 @@
 module.exports = function (config) {
     const package = require('./package.json');
+    const testTarget = `moment-immutable${process.env.MINIFIED_TESTS ? '.min' : ''}.js`;
+    console.log(`Testing ${testTarget} ...`);
     config.set({
         basePath: '',
         frameworks: ['jasmine'],
         files: [
             'node_modules/moment/moment.js',
-            'moment-immutable.js',
+            testTarget,
             'tests/unit-tests/moment-immutable.spec.js'
         ],
         exclude: [],
@@ -29,7 +31,7 @@ module.exports = function (config) {
             'tests/unit-tests/moment-immutable.spec.js': ['global', 'eslint'],
             'moment-immutable.js': ['coverage', 'eslint']
         },
-        coverageReporter: {
+        coverageReporter:  process.env.MINIFIED_TESTS ? undefined : {
             reporters: [
                 { type: 'lcov',  dir: 'coverage/'},
                 { type: 'text' }

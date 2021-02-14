@@ -1,19 +1,17 @@
 {
   "name": "moment-immutable",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Make moment.js immutable",
   "main": "moment-immutable.js",
   "typings": "./moment-immutable.d.ts",
   "scripts": {
-    "test": "run-s prod:test:*",
-    "start": "run-p dev:*",
-    "dev:test": "karma start",
-    "update": "ncu -u",
-    "build": "run-s prod:*",
-    "prod:minify": "uglifyjs --compress --mangle -- moment-immutable.js > moment-immutable.min.js",
-    "prod:test": "run-s prod:test:*",
-    "prod:test:unit": "karma start --singleRun",
-    "prod:test:typings": "tsc --project tests/typings-tests"
+    "test": "npm run test:dev && npm run test:prod && npm run test:typings",
+    "test:dev": "karma start --singleRun",
+    "test:prod": "cross-env MINIFIED_TESTS=true karma start --single-run",
+    "test:typings": "tsc --project tests/typings-tests",
+    "start": "npm run test:dev",
+    "build": "uglifyjs --compress --mangle -- moment-immutable.js > moment-immutable.min.js",
+    "prepare": "npm run build && npm test"
   },
   "repository": {
     "type": "git",
@@ -36,6 +34,7 @@
   },
   "devDependencies": {
     "@types/moment": "2.13.0",
+    "cross-env": "^7.0.3",
     "jasmine-core": "3.6.0",
     "karma": "6.1.0",
     "karma-chrome-launcher": "^3.1.0",
