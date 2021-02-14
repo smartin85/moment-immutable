@@ -1,6 +1,7 @@
 # moment-immutable
 [![MIT License][license-image]][license-url] 
 [![npm version][npm-image]][npm-url]
+[![npm downloads][downloads-image]][npm-url]
 [![Build Status][azure-pipeline-image]][azure-pipeline-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
@@ -77,16 +78,15 @@ moment.immutable.addDurationMutable('set', 0);  // makes the set-function immuta
 [license-url]: LICENSE
 
 [npm-image]: https://badge.fury.io/js/moment-immutable.svg
-[npm-url]: https://badge.fury.io/js/moment-immutable
+[npm-url]: https://www.npmjs.com/package/moment-immutable
+
+[downloads-image]: https://img.shields.io/npm/dt/moment-immutable.svg
 
 [coveralls-image]: https://coveralls.io/repos/github/smartin85/moment-immutable/badge.svg
 [coveralls-url]: https://coveralls.io/github/smartin85/moment-immutable
 
-[versioneye-image]: https://www.versioneye.com/user/projects/58a0d4ab6a7781003a57a209/badge.svg
-[versioneye-url]: https://www.versioneye.com/user/projects/58a0d4ab6a7781003a57a209
-
-[snyk-image]: https://snyk.io/test/github/smartin85/moment-period/badge.svg
-[snyk-url]: https://snyk.io/test/github/smartin85/moment-period
+[snyk-image]: https://snyk.io/test/github/smartin85/moment-immutable/badge.svg
+[snyk-url]: https://snyk.io/test/github/smartin85/moment-immutable
 
 [azure-pipeline-image]: https://dev.azure.com/smartin85/moment-immutable/_apis/build/status/smartin85.moment-immutable?branchName=master
 [azure-pipeline-url]: https://dev.azure.com/smartin85/moment-immutable/_build/latest?definitionId=2&branchName=master

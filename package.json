@@ -1,6 +1,6 @@
 {
   "name": "moment-immutable",
-  "version": "1.0.7",
+  "version": "1.0.9",
   "description": "Make moment.js immutable",
   "main": "moment-immutable.js",
   "typings": "./moment-immutable.d.ts",
