@@ -1,7 +1,6 @@
 # moment-immutable
 [![MIT License][license-image]][license-url] 
 [![npm version][npm-image]][npm-url]
-[![Bower version][bower-image]][bower-url]
 [![Build Status][azure-pipeline-image]][azure-pipeline-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
 [![Known Vulnerabilities][snyk-image]][snyk-url]
@@ -77,14 +76,6 @@ moment.immutable.addDurationMutable('set', 0);  // makes the set-function immuta
 
 [npm-image]: https://badge.fury.io/js/moment-immutable.svg
 [npm-url]: https://badge.fury.io/js/moment-immutable
-
-[bower-image]: https://badge.fury.io/bo/moment-immutable.svg
-[bower-url]: https://badge.fury.io/bo/moment-immutable
-
-
-
-[travis-url]: http://travis-ci.org/smartin85/moment-immutable
-[travis-image]: https://travis-ci.org/smartin85/moment-immutable.svg?branch=master
 
 [coveralls-image]: https://coveralls.io/repos/github/smartin85/moment-immutable/badge.svg
 [coveralls-url]: https://coveralls.io/github/smartin85/moment-immutable
